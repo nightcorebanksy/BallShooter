@@ -16,6 +16,7 @@ public class UIManager : MonoBehaviour
 
     public GameObject gamePlayUI;
     public GameObject mainMenuUI;
+    public GameObject levelSelectUI;
     public GameObject levelCompleteUI;
     public GameObject gameCompleteUI;
     public GameObject levelFailedUI;
@@ -45,14 +46,17 @@ public class UIManager : MonoBehaviour
         DisableAllUIPanels();
         mainMenuUI.SetActive(true);
     }
+    public void UILevelSelect()
+    {
+        DisableAllUIPanels();
+        levelSelectUI.SetActive(true);
+    }
 
     public void UIGamePlay() // same as UIRolling.. consider merging them into one method for UIGameplay? make sure there are no issues first
     {
         DisableAllUIPanels();
         gamePlayUI.SetActive(true);
     }
-
-
 
     public void UILevelFailed()
     {
@@ -82,6 +86,7 @@ public class UIManager : MonoBehaviour
     {
         gamePlayUI.SetActive(false);
         mainMenuUI.SetActive(false);
+        levelSelectUI.SetActive(false);
         levelCompleteUI.SetActive(false);
         gameCompleteUI.SetActive(false);
         levelFailedUI.SetActive(false);

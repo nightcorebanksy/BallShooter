@@ -43,6 +43,14 @@ public class LevelManager : MonoBehaviour
             Debug.Log("All levels complete!");
         }
     }
+    public void LoadSelectLevel(int level)
+    {
+        nextScene = SceneManager.GetActiveScene().buildIndex + level;
+        {            
+            LoadScene(nextScene);
+            _gameStateManager.SwitchToState(_gameStateManager.gameState_Aim);
+        }
+    }
 
     void LoadScene(int sceneId)
     {
