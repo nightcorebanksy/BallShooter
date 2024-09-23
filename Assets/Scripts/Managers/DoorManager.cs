@@ -21,6 +21,4 @@ public class DoorManager : MonoBehaviour
 	public bool doorOpened;
 	public float doorOpenSpeed = 0.5f;
 
-
-
 }
