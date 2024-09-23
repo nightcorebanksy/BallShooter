@@ -90,7 +90,11 @@ public class BallManager : MonoBehaviour
         {
             SetBallToStartPosition();
         }
-    }
+
+		else if (other.gameObject.tag == "ResetTrigger") {
+			SetBallToStartPosition();
+		}
+	}
 
     public void HandleAimGuide()
     {

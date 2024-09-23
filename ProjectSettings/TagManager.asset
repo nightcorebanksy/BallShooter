@@ -10,6 +10,7 @@ TagManager:
   - ResetTrigger
   - BallStartPosition
   - Goal
+  - RedTrigger
   layers:
   - Default
   - TransparentFX
