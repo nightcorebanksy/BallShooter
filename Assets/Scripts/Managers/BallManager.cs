@@ -17,7 +17,6 @@ public class BallManager : MonoBehaviour
     public GameManager _gameManager;
     public GameStateManager _gameStateManager;
     public CameraManager _cameraManager;
-    public DoorManager _doorManager;
 
 
     public bool ballStopped;
@@ -34,7 +33,6 @@ public class BallManager : MonoBehaviour
         if (_gameManager == null) { Debug.LogError("GameManager is not assigned to BallManager in the Inspector!"); }
         if (_gameStateManager == null) { Debug.LogError("GameStateManager is not assigned to BallManager in the Inspector!"); }
         if (_cameraManager == null) { Debug.LogError("CameraManager is not assigned to BallManager in the Inspector!"); }
-        if (_doorManager == null) { Debug.LogError("DoorManager is not assigned to BallManager in the Inspector!"); }
     }
 
 
@@ -92,10 +90,6 @@ public class BallManager : MonoBehaviour
         {
             SetBallToStartPosition();
         }
-
-		else if (other.gameObject.tag == "DoorTrigger") {
-			_doorManager.doorOpened 
-		}
 	}
 
     public void HandleAimGuide()
