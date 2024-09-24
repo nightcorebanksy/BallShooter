@@ -35,8 +35,6 @@ public class BallManager : MonoBehaviour
         if (_cameraManager == null) { Debug.LogError("CameraManager is not assigned to BallManager in the Inspector!"); }
     }
 
-
-
     private void Start()
     {
         ballStopped = true; // the ball should be stopped at the start of the game

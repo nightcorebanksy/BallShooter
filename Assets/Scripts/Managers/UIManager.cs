@@ -22,10 +22,6 @@ public class UIManager : MonoBehaviour
     public GameObject levelFailedUI;
     public GameObject pauseMenuUI;
 
-
-
-
-
     public Text modeText;    
     public Text ShotsLeftCount;
 

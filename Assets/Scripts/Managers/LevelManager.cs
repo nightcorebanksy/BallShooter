@@ -27,7 +27,6 @@ public class LevelManager : MonoBehaviour
         if (_gameStateManager == null) { Debug.LogError("GameStateManager is not assigned to LevelManager in the Inspector!"); }
     }
 
-
     public void LoadNextlevel()
     {
         nextScene = SceneManager.GetActiveScene().buildIndex + 1;
