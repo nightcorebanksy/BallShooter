@@ -83,7 +83,8 @@ public class LevelManager : MonoBehaviour
         if (scene.buildIndex > 0)
         {         
             // Get a reference to the level info Script for that level
-            LevelInfo _levelInfo = FindObjectOfType<LevelInfo>();            
+            LevelInfo _levelInfo = FindObjectOfType<LevelInfo>();  
+            
 
             // Get the # shots(attempts) available for the level and update the UI
             _gameManager.shotsLeft = _levelInfo.ShotsToComplete;            

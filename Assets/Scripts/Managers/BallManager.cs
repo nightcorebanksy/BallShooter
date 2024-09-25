@@ -18,6 +18,8 @@ public class BallManager : MonoBehaviour
     public GameStateManager _gameStateManager;
     public CameraManager _cameraManager;
 
+    public GameObject levelInfo;
+
 
     public bool ballStopped;
     public float ballMagnitudeStopThreshold = 0.1f; // Adjust this value as needed

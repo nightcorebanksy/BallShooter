@@ -22,8 +22,11 @@ public class UIManager : MonoBehaviour
     public GameObject levelFailedUI;
     public GameObject pauseMenuUI;
 
+    public GameObject levelInfo;
+
     public Text modeText;    
     public Text ShotsLeftCount;
+    public Text medalText;
 
     public Text LevelCount;
     
@@ -63,6 +66,7 @@ public class UIManager : MonoBehaviour
     public void UILevelComplete()
     {
         DisableAllUIPanels();
+
         levelCompleteUI.SetActive(true);
     }
 
