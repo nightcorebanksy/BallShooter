@@ -8855,6 +8855,21 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 622763330879593280, guid: 80dc5fed223346e4fa53a8715357b330,
         type: 3}
+      propertyPath: GoldMedal
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 622763330879593280, guid: 80dc5fed223346e4fa53a8715357b330,
+        type: 3}
+      propertyPath: BronzeMedal
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 622763330879593280, guid: 80dc5fed223346e4fa53a8715357b330,
+        type: 3}
+      propertyPath: SilverMedal
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 622763330879593280, guid: 80dc5fed223346e4fa53a8715357b330,
+        type: 3}
       propertyPath: ShotsToComplete
       value: 5
       objectReference: {fileID: 0}
