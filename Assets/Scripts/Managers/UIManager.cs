@@ -12,7 +12,7 @@ public class UIManager : MonoBehaviour
     private BallManager _ballController;
 
     //private GameObject gameManager;
-    //private GameManager _gameManager;
+    public GameManager _gameManager;
 
     public GameObject gamePlayUI;
     public GameObject mainMenuUI;
@@ -22,7 +22,7 @@ public class UIManager : MonoBehaviour
     public GameObject levelFailedUI;
     public GameObject pauseMenuUI;
 
-    public GameObject levelInfo;
+    public LevelInfo levelInfo;
 
     public Text modeText;    
     public Text ShotsLeftCount;
@@ -31,6 +31,7 @@ public class UIManager : MonoBehaviour
     public Text GoldCount;
     public Text SilverCount;
     public Text BronzeCount;
+    public Text MedalText;
 
     public void UpdateShotsleft(int count)
     {        
@@ -75,6 +76,11 @@ public class UIManager : MonoBehaviour
     public void UILevelComplete()
     {
         DisableAllUIPanels();
+
+        if (_gameManager.shotsLeft >= levelInfo.ShotsToComplete - levelInfo.GoldMedal) MedalText.text = "Medal: Gold";
+        else if (_gameManager.shotsLeft >= levelInfo.ShotsToComplete - levelInfo.SilverMedal) MedalText.text = "Medal: Silver";
+        else if (_gameManager.shotsLeft >= levelInfo.ShotsToComplete - levelInfo.BronzeMedal) MedalText.text = "Medal: Bronze";
+        else MedalText.text = "Medal: None";
 
         levelCompleteUI.SetActive(true);
     }
