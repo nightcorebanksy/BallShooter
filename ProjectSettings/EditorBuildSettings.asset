@@ -21,6 +21,6 @@ EditorBuildSettings:
     path: Assets/Scenes/BallShooter_04_dynae.unity
     guid: 0710650d55f72bb45ac4528ee9471680
   - enabled: 1
-    path: Assets/Scenes/BallShooter_Bonus_dynae.unity
+    path: Assets/Scenes/BallShooter_05_dynae.unity
     guid: e310cca876ca93241a082881ec988dec
   m_configObjects: {}
