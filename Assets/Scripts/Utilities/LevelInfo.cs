@@ -8,8 +8,7 @@ using UnityEngine;
 public class LevelInfo : MonoBehaviour
 {
     public int ShotsToComplete;
-    public int ShotsTaken;
-    public int BronzeMedal;
-    public int SilverMedal;
     public int GoldMedal;
+    public int SilverMedal;
+    public int BronzeMedal;
 }

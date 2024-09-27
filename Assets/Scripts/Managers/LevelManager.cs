@@ -78,13 +78,14 @@ public class LevelManager : MonoBehaviour
     public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         int LevelCount = SceneManager.GetActiveScene().buildIndex;
+        
         Debug.Log("Scene Loaded: " + scene.name + " Build Index: " + scene.buildIndex);
 
         if (scene.buildIndex > 0)
         {         
             // Get a reference to the level info Script for that level
             LevelInfo _levelInfo = FindObjectOfType<LevelInfo>();  
-            
+
 
             // Get the # shots(attempts) available for the level and update the UI
             _gameManager.shotsLeft = _levelInfo.ShotsToComplete;            
@@ -92,6 +93,14 @@ public class LevelManager : MonoBehaviour
 
             // Update the current level # on the UI
             _uIManager.UpdateLevelCount(LevelCount);
+
+
+            int goldMedal = _levelInfo.GoldMedal;
+            int silverMedal = _levelInfo.SilverMedal;
+            int bronzeMedal = _levelInfo.BronzeMedal;
+
+            // dynae - update medals for current level
+            _uIManager.UpdateMedalCount(goldMedal, silverMedal, bronzeMedal);
 
             // Set the ball to the current level start position           
             _ballManager.SetBallToStartPosition();

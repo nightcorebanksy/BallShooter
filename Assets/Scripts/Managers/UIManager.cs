@@ -26,10 +26,12 @@ public class UIManager : MonoBehaviour
 
     public Text modeText;    
     public Text ShotsLeftCount;
-    public Text medalText;
 
     public Text LevelCount;
-    
+    public Text GoldCount;
+    public Text SilverCount;
+    public Text BronzeCount;
+
     public void UpdateShotsleft(int count)
     {        
         ShotsLeftCount.text = count.ToString();
@@ -38,6 +40,13 @@ public class UIManager : MonoBehaviour
     public void UpdateLevelCount(int count)
     {
         LevelCount.text = count.ToString();
+    }
+
+    public void UpdateMedalCount(int goldCount, int silverCount, int bronzeCount)
+    {
+        GoldCount.text = goldCount.ToString();
+        SilverCount.text = silverCount.ToString();
+        BronzeCount.text = bronzeCount.ToString();
     }
 
     public void UIMainMenu()
